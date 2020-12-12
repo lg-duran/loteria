@@ -20,16 +20,66 @@ public class Programa {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             
             String linha = "";
+
+            String rownspan = "<td rowspan=";
+
+            String terminoDaLinha = "<td rowspan=" + "\"" + "5" + "\"" + ">0,00</td>";
+            
+
 		    while (true) {
 
-			if (linha != null) {
-				System.out.println(linha);
+                if (linha != null) {
 
-			} else
-                
-                break;
+                    if (linha.contains(rownspan)) {
+
+                        if (linha.contains(terminoDaLinha)) {
+
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            linha = bufferedReader.readLine();
+                            
+                            
+
+                        } 
+                            
+                        System.out.println(linha);
+                       
+
+                    }
+
+                    
+
+                } else                    
+                    break;
+
 			linha = bufferedReader.readLine();
         }
+
         
             bufferedReader.close();
 
